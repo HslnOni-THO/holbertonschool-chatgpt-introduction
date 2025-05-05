@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+      <h1 class="title">Hello World!</h1>
+      <p id="currentTime"></p>
+
+      <!-- ici le bouton pour switch de couleur-->
+      <button id="changeColorButton">Change Background Color</button>
+
+      <script src="script.js"></script>
+
+      <script>
+        // changer la couleur du fond de body avec Java
+        document.getElementById("changeColorButton").addEventListener("click", function() {
+          // les couleurs random
+          var randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+          // Changer la couleur de fond du body
+          document.body.style.backgroundColor = randomColor;
+        });
+      </script>
+  </body>
+</html>
